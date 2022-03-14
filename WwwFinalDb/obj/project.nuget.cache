@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "vRnvqykScW3gi2r3up+1lO5alsqWfxX/uqHmrBlNuWahDui6Zc2yEpa0HZdElnvULr9/fELZPEPj4YTVnwISOw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Ayman\\source\\repos\\WwwPractice01\\WwwFinalDb\\WwwFinalDb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ayman\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ayman\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project WwwPractice01 is not compatible with netstandard2.0 (.NETStandard,Version=v2.0). Project WwwPractice01 supports: net5.0 (.NETCoreApp,Version=v5.0)",
+      "libraryId": "WwwPractice01",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

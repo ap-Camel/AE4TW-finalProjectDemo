@@ -1,0 +1,9 @@
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\bin\Debug\netstandard2.0\WwwPracticeDb.deps.json
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\bin\Debug\netstandard2.0\WwwPracticeDb.dll
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\bin\Debug\netstandard2.0\WwwPracticeDb.pdb
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\obj\Debug\netstandard2.0\WwwPracticeDb.csprojAssemblyReference.cache
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\obj\Debug\netstandard2.0\WwwPracticeDb.AssemblyInfoInputs.cache
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\obj\Debug\netstandard2.0\WwwPracticeDb.AssemblyInfo.cs
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\obj\Debug\netstandard2.0\WwwPracticeDb.csproj.CoreCompileInputs.cache
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\obj\Debug\netstandard2.0\WwwPracticeDb.dll
+C:\Users\Ayman\source\repos\WwwPractice01\WwwPracticeDb\obj\Debug\netstandard2.0\WwwPracticeDb.pdb

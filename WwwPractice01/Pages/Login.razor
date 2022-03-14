@@ -1,0 +1,62 @@
+﻿@page "/login"
+
+
+@using WwwPracticeDb
+@using WwwPracticeDb.Models
+@using WwwPractice01.Models
+
+
+@inject NavigationManager navigationManager
+@inject AuthenticationStateProvider a
+@inject ITeacherData _db
+
+<h3>Teachers Page</h3>
+
+<h4> log in </h4>
+<EditForm Model="@newTeacher" OnValidSubmit="@InsertTeachers">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="firstName" @bind-Value="newTeacher.firstName" />
+    <InputText id="id" @bind-Value="newTeacher.PersonID" />
+
+    <button type="submit" class="btn btn-primary">login</button>
+
+</EditForm>
+
+
+@code {
+
+
+
+    private List<TeachersModel> teacher;
+    private TeachersModel teacher2;
+    private DisplayTeachersPagesModel newTeacher = new DisplayTeachersPagesModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        teacher = new List<TeachersModel>();
+        teacher2 = new TeachersModel();
+    }
+
+    private async Task InsertTeachers()
+    {
+
+        teacher2.PersonID = int.Parse(newTeacher.PersonID);
+        teacher2.firstName = newTeacher.firstName;
+        teacher2.lastName = "jawhar";
+
+        if (await _db.TeacherExists(teacher2))
+        {
+            ((CustomeAuthenticationStateProvider)a).MarkUserAsAuthenticated(teacher2);
+
+            navigationManager.NavigateTo("/");
+        }
+
+        //    ((CustomeAuthenticationStateProvider)a).MarkUserAsAuthenticated(teacher2);
+
+        //    navigationManager.NavigateTo("/Counter");
+
+
+    }
+}

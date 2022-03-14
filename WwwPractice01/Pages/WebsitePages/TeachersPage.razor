@@ -1,0 +1,73 @@
+﻿@page "/TeachersPage"
+
+@using WwwPracticeDb
+@using WwwPracticeDb.Models
+@using WwwPractice01.Models
+
+@inject ITeacherData _db
+
+<h3>Teachers Page</h3>
+
+<h4>insert new teacher</h4>
+<EditForm Model="@newTeacher" OnValidSubmit="@InsertTeachers">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="firstName" @bind-Value="newTeacher.firstName" />
+    <InputText id="lastName" @bind-Value="newTeacher.lastName" />
+
+    <button type="submit" class="btn btn-primary">submit</button>
+
+</EditForm>
+
+<h4> current teachers</h4>
+@if (teachers is null)
+{
+    <p><em>loading ...</em></p>
+} else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>first name</th>
+                <th>last name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in teachers)
+            {
+            <tr>
+                <td>@t.PersonID</td>
+                <td>@t.firstName</td>
+                <td>@t.lastName</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<TeachersModel> teachers;
+    private DisplayTeachersPagesModel newTeacher = new DisplayTeachersPagesModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        teachers = await _db.GetTeachers();
+    }
+
+    private async Task InsertTeachers()
+    {
+        TeachersModel t = new TeachersModel
+        {
+            PersonID = 9,
+            firstName = newTeacher.firstName,
+            lastName = newTeacher.lastName
+        };
+
+        await _db.InsertTeacher(t);
+
+        teachers.Add(t);
+
+    }
+}
